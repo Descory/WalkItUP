@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weeklyMissions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#454545"
+    android:screenOrientation="portrait"
+    tools:context=".missions">
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="351dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="536dp"
+        android:progressTint="#0040FF"
+        android:scaleY="5"
+        app:layout_constraintEnd_toEndOf="@+id/monthly"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/monthly"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/progrss2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+        app:layout_constraintStart_toStartOf="@+id/progressBar2"
+        app:layout_constraintTop_toBottomOf="@+id/level2" />
+
+    <TextView
+        android:id="@+id/level2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level: "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/progressBar2"
+        app:layout_constraintTop_toBottomOf="@+id/monthly"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/montlypr"
+        android:layout_width="173dp"
+        android:layout_height="158dp"
+        android:elevation="2dp"
+        app:cpb_background_progressbar_color="#b6bbd8"
+        app:cpb_background_progressbar_width="5dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progress_max="80000"
+        app:cpb_progressbar_color="#3f51b5"
+        app:cpb_progressbar_width="10dp"
+        app:cpb_round_border="false"
+        app:layout_constraintBottom_toBottomOf="@+id/monthly"
+        app:layout_constraintEnd_toEndOf="@+id/monthly"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/monthly"
+        app:layout_constraintTop_toTopOf="@+id/monthly"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <TextView
+        android:id="@+id/daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/daily_m"
+        android:text="@string/daily_missions"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/weekly"
+        android:layout_width="248dp"
+        android:layout_height="159dp"
+        android:background="@drawable/weekly_m"
+        android:text="@string/daily_missions"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/daily"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="@+id/daily"
+        app:layout_constraintTop_toBottomOf="@+id/daily"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/monthly"
+        android:layout_width="248dp"
+        android:layout_height="162dp"
+        android:background="@drawable/monthly_m"
+        android:text="@string/daily_missions"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/weekly"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/weekly"
+        app:layout_constraintTop_toBottomOf="@+id/weekly"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/Daily"
+        android:layout_width="220dp"
+        android:layout_height="152dp"
+        android:elevation="2dp"
+        app:cpb_background_progressbar_color="#b6bbd8"
+        app:cpb_background_progressbar_width="5dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progress_max="2500"
+        app:cpb_progressbar_color="#3f51b5"
+        app:cpb_progressbar_width="10dp"
+        app:cpb_round_border="false"
+        app:layout_constraintBottom_toBottomOf="@+id/daily"
+        app:layout_constraintEnd_toEndOf="@+id/daily"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/daily"
+        app:layout_constraintTop_toTopOf="@+id/daily" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/weeklypr"
+        android:layout_width="173dp"
+        android:layout_height="158dp"
+        android:elevation="2dp"
+        app:cpb_background_progressbar_color="#b6bbd8"
+        app:cpb_background_progressbar_width="5dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progress_max="15000"
+        app:cpb_progressbar_color="#3f51b5"
+        app:cpb_progressbar_width="10dp"
+        app:cpb_round_border="false"
+        app:layout_constraintBottom_toBottomOf="@+id/weekly"
+        app:layout_constraintEnd_toEndOf="@+id/weekly"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/weekly"
+        app:layout_constraintTop_toTopOf="@+id/weekly"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <TextView
+        android:id="@+id/tv_totalMax2"
+        android:layout_width="38dp"
+        android:layout_height="26dp"
+        android:text="/2500"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/Daily"
+        app:layout_constraintEnd_toEndOf="@+id/tvdaily"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/tvdaily"
+        app:layout_constraintTop_toBottomOf="@+id/tvdaily"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvdaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/daily"
+        app:layout_constraintEnd_toEndOf="@+id/Daily"
+        app:layout_constraintStart_toStartOf="@+id/Daily"
+        app:layout_constraintTop_toTopOf="@+id/daily" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/15000"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/weeklypr"
+        app:layout_constraintEnd_toEndOf="@+id/weeklypr"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/weeklypr"
+        app:layout_constraintTop_toTopOf="@+id/weeklypr"
+        app:layout_constraintVertical_bias="0.647" />
+
+    <TextView
+        android:id="@+id/weeklytv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="@+id/weeklypr"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/weeklypr"
+        app:layout_constraintTop_toTopOf="@+id/weeklypr"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/80000"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/montlypr"
+        app:layout_constraintEnd_toEndOf="@+id/montlypr"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/montlypr"
+        app:layout_constraintTop_toTopOf="@+id/montlypr"
+        app:layout_constraintVertical_bias="0.633" />
+
+    <TextView
+        android:id="@+id/monthlytv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/montlypr"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/montlypr"
+        app:layout_constraintTop_toTopOf="@+id/montlypr"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/dailymiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvdaily"
+        app:layout_constraintEnd_toEndOf="@+id/Daily"
+        app:layout_constraintStart_toStartOf="@+id/Daily"
+        app:layout_constraintTop_toTopOf="@+id/daily" />
+
+    <TextView
+        android:id="@+id/weeklymis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weekly_missions"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weeklytv"
+        app:layout_constraintEnd_toEndOf="@+id/weekly"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/weekly"
+        app:layout_constraintTop_toTopOf="@+id/weekly"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <TextView
+        android:id="@+id/monthlymis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monthly_missions"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/monthlytv"
+        app:layout_constraintEnd_toEndOf="@+id/monthly"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/monthly"
+        app:layout_constraintTop_toTopOf="@+id/monthly" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="535dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+500 xp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_totalMax2"
+        app:layout_constraintEnd_toEndOf="@+id/dailymiss"
+        app:layout_constraintStart_toStartOf="@+id/dailymiss"
+        app:layout_constraintTop_toBottomOf="@+id/dailymiss"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+5000 xp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/monthlytv"
+        app:layout_constraintEnd_toEndOf="@+id/monthlymis"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="@+id/monthlymis"
+        app:layout_constraintTop_toBottomOf="@+id/monthlymis"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+2500 xp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/weeklytv"
+        app:layout_constraintEnd_toEndOf="@+id/weeklymis"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="@+id/weeklymis"
+        app:layout_constraintTop_toBottomOf="@+id/weeklymis"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
